@@ -56,12 +56,12 @@ chmod +x deploy.sh
 
 2. Kick off chunking via HTTP:
 
-   ``` bash
-   curl -X POST \                  \
-  -H 'Content-Type: application/json' \
-  -d '{"bucket": "mjones3-genome-seq-batch-demo", "key": "input/chr1.fasta"}' \
-  $STARTER_API_URL
-  ```
+    ``` bash
+    curl -X POST \                  \
+    -H 'Content-Type: application/json' \
+    -d '{"bucket": "mjones3-genome-seq-batch-demo", "key": "input/chr1.fasta"}' \
+    $STARTER_API_URL
+    ```
 
 3. Monitor progress
    - **S3:** watch `chunks/` for new `.chunk0000…` files and `results/` for per-chunk JSONs.
