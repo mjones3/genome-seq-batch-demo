@@ -7,7 +7,7 @@ With a single API call, this solution automatically breaks a massive genome file
 ![Architecture Diagram](images/genome-fan-out-fan-in.png)
 
 
-1. User sends request to *API Gateway* request with { bucket, key }, where bucket is the S3 bucket containing the FASTA [Homo sapiens a GRCh38 genome file (3.34GB)](ftp://ftp.ncbi.nlm.nih.gov/genomes/all/annotation_releases/9606/GCF_000001405.40-RS_2024_08/GCF_000001405.40_GRCh38.p14_genomic.fna.gz) and key is the location of the file within the bucket.  
+1. User sends request to **API Gateway** request with { bucket, key }, where bucket is the S3 bucket containing the FASTA [Homo sapiens a GRCh38 genome file (3.34GB)] (ftp://ftp.ncbi.nlm.nih.gov/genomes/all/annotation_releases/9606/GCF_000001405.40-RS_2024_08/GCF_000001405.40_GRCh38.p14_genomic.fna.gz) and key is the location of the file within the bucket.  
 
 2. The `/chunk` resource triggers the **Starter Lambda** which immediately returns HTTP 200 and
 
