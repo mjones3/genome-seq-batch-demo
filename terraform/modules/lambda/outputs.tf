@@ -1,4 +1,4 @@
-output "star_function_target_arn" {
+output "starter_function_target_arn" {
   description = "Starter function"
   value       = aws_lambda_function.starter.arn
 }

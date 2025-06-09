@@ -44,7 +44,7 @@ resource "aws_ecr_repository" "genome_job_repo" {
 module "lambda" {
   source                = "./modules/lambda"
   genome_bucket_arn     = aws_s3_bucket.genome_bucket.arn
-  genome_bucket_name    = "mjones3-genome-seq-batch-demo "
+  genome_bucket_name    = "mjones3-genome-seq-batch-demo"
   chunker_function_name = "chunkerFunction"
   starter_function_name = "starterFunction"
 }

@@ -106,6 +106,7 @@ resource "aws_lambda_function" "aggregator" {
   filename         = "../functions/aggregator/aggregatorFunction.zip" # ← replace with your deployment package
   source_code_hash = filebase64sha256("../functions/aggregator/aggregatorFunction.zip")
 
+  timeout = 300
   environment {
     variables = {
       BUCKET         = var.genome_bucket_name
@@ -180,12 +181,7 @@ resource "aws_cloudwatch_event_rule" "batch_array_any_succeeded" {
   name_prefix = "batch-array-succeeded-"
   description = "Fires whenever any child of the Batch array job SUCCEEDED"
   event_pattern = jsonencode({
-    "source"      = ["aws.batch"],
-    "detail-type" = ["Batch Job State Change"],
-    "detail" = {
-      "status"  = ["SUCCEEDED"],
-      "jobName" = ["genomeProcessArrayJob"]
-    }
+    "source" : ["aws.batch"]
   })
 }
 
