@@ -2,7 +2,7 @@
 
 ## Fan-out/Fan-in Pattern Demonstration ##
 
-With a single API call, this solution automatically breaks a massive genome file into bite-sized chunks, processes each piece in parallel in the cloud, and then gathers all those individual results into one cohesive report—making large-scale DNA analysis fast, hands-off, and easy to scale.
+With a single API call, this solution automatically breaks a massive genome file into bite-sized chunks, processes each piece in parallel in the cloud, and then gathers all those individual results into one cohesive report, making large-scale DNA analysis fast, hands-off, and easy to scale.
 
 ![Architecture Diagram](images/genome-fan-out-fan-in.png)
 
